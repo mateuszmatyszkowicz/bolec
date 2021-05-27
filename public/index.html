@@ -73,5 +73,28 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyDQADI-LEe8DKB2D4RkJJ2-K-7Sf0MAoKY",
+    authDomain: "zaparkowani-96d8f.firebaseapp.com",
+    projectId: "zaparkowani-96d8f",
+    storageBucket: "zaparkowani-96d8f.appspot.com",
+    messagingSenderId: "450203696758",
+    appId: "1:450203696758:web:530799cdfdd5d2c809e957",
+    measurementId: "G-MPC3FQE9CJ"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
   </body>
 </html>
