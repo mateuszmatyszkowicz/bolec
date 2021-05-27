@@ -105,7 +105,7 @@ import SaaSProductLandingPage from "demos/SaaSProductLandingPage.js";
 // import MainLandingPage from "MainLandingPage.js";
 // import ThankYouPage from "ThankYouPage.js";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-const instance = amplitude.getInstance("instance").init("73f309ca2d10c677f5048748ccce3a11", null, {includeUtm: true}); // initializes with the given options
+amplitude.getInstance("instance").init("73f309ca2d10c677f5048748ccce3a11", null, {includeUtm: true}); // initializes with the given options
 
 
 export default function App() {
