@@ -1,7 +1,8 @@
 import "tailwindcss/dist/base.css";
 import "styles/globalStyles.css";
-import React from "react";
+import React, { useEffect } from "react";
 import { css } from "styled-components/macro"; //eslint-disable-line
+import amplitedejs from 'amplitude-js';
 /*
  * This is the entry point component of this project. You can change the below exported default App component to any of
  * the prebuilt landing page components by uncommenting their import and export lines respectively.
@@ -106,9 +107,12 @@ import SaaSProductLandingPage from "demos/SaaSProductLandingPage.js";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 
+amplitedejs.getInstance().init("73f309ca2d10c677f5048748ccce3a11", null, {includeUtm: true}); // initializes with the given options
 
 export default function App() {
- 
+  useEffect(() => {
+    amplitedejs.getInstance().logEvent('PAGE_VIEW');
+  }, [])
   // If you want to disable the animation just use the disabled `prop` like below on your page's component
   // return <AnimationRevealPage disabled>xxxxxxxxxx</AnimationRevealPage>;
   
