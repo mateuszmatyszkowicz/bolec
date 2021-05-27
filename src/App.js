@@ -1,6 +1,6 @@
 import "tailwindcss/dist/base.css";
 import "styles/globalStyles.css";
-import React from "react";
+import React, { useEffect } from "react";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import amplitude from 'amplitude-js';
 /*
@@ -109,6 +109,9 @@ amplitude.getInstance("instance").init("73f309ca2d10c677f5048748ccce3a11", null,
 
 
 export default function App() {
+  useEffect(() => {
+    amplitude.getInstance().logEvent('PAGE_VIEW');
+  }, [])
   // If you want to disable the animation just use the disabled `prop` like below on your page's component
   // return <AnimationRevealPage disabled>xxxxxxxxxx</AnimationRevealPage>;
   
