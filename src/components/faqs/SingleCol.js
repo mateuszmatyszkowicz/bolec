@@ -9,6 +9,7 @@ import { Container, ContentWithPaddingXl } from "components/misc/Layouts.js";
 import { ReactComponent as ChevronDownIcon } from "feather-icons/dist/icons/chevron-down.svg";
 import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-7.svg";
 import { ReactComponent as SvgDecoratorBlob2 } from "images/svg-decorator-blob-8.svg";
+import {TestId} from "consts/consts.js"
 
 const Subheading = tw(SubheadingBase)`mb-4 text-center`;
 const Heading = tw(SectionHeading)`w-full`;
@@ -36,12 +37,10 @@ const DecoratorBlob2 = styled(SvgDecoratorBlob2)`
   ${tw`pointer-events-none -z-20 absolute left-0 bottom-0 h-64 w-64 opacity-15 transform -translate-x-2/3 text-primary-500`}
 `;
 
-
-
 export default ({
-  subheading = "FAQS",
-  heading = "You have Questions ?",
-  description = "And we have got answers to all of them. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  subheading = "FAQs",
+  heading = "Czy masz jakieś pytania ?",
+  description = "Jeśli nie znalazłeś odpowiedzi na nurtujące Cię pytania na poniższej liście. Skontaktuj się z nami !",
   faqs = [
     {
       question: "Is lunch provided free of cost ?",
@@ -77,21 +76,23 @@ export default ({
       <ContentWithPaddingXl>
         <Column>
           <HeaderContent>
-            {subheading && <Subheading>{subheading}</Subheading>}
-            <Heading>{heading}</Heading>
-            {description && <Description>{description}</Description>}
+            {subheading && <Subheading id={TestId.FAQ.Subheader}>{subheading}</Subheading>}
+            <Heading id={TestId.FAQ.Header}>{heading}</Heading>
+            {description && <Description id={TestId.FAQ.Description}>{description}</Description>}
           </HeaderContent>
-          <FAQSContainer>
+          <FAQSContainer id={TestId.FAQ.QuestionContainer}>
             {faqs.map((faq, index) => (
               <FAQ
+                id={TestId.FAQ.QuestionSingleContainer}
                 key={index}
                 onClick={() => {
                   toggleQuestion(index);
                 }}
                 className="group"
+
               >
-                <Question>
-                  <QuestionText>{faq.question}</QuestionText>
+                <Question id={TestId.FAQ.Question}>
+                  <QuestionText id={TestId.FAQ.QuestionText}>{faq.question}</QuestionText>
                   <QuestionToggleIcon
                     variants={{
                       collapsed: { rotate: 0 },
@@ -100,6 +101,7 @@ export default ({
                     initial="collapsed"
                     animate={activeQuestionIndex === index ? "open" : "collapsed"}
                     transition={{ duration: 0.02, ease: [0.04, 0.62, 0.23, 0.98] }}
+                    id={TestId.FAQ.QuestionToggleIcon}
                   >
                     <ChevronDownIcon />
                   </QuestionToggleIcon>
@@ -112,6 +114,7 @@ export default ({
                   initial="collapsed"
                   animate={activeQuestionIndex === index ? "open" : "collapsed"}
                   transition={{ duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }}
+                  id={TestId.FAQ.QuestionAnswer}
                 >
                   {faq.answer}
                 </Answer>

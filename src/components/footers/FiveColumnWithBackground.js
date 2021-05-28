@@ -2,6 +2,7 @@ import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
+import {TestId} from "consts/consts.js"
 
 import LogoImage from "images/logo-light.svg";
 import { ReactComponent as FacebookIcon } from "images/facebook-icon.svg";
@@ -140,20 +141,20 @@ export default () => {
         </FiveColumns>
         <Divider /> */}
         <ThreeColRow>
-          <LogoContainer>
-            <LogoImg src={LogoImage} />
-            <LogoText>Treact Inc.</LogoText>
+          <LogoContainer id={TestId.Footer.LogoContainer}>
+            <LogoImg src={LogoImage} id={TestId.Footer.LogoImage} />
+            <LogoText id={TestId.Footer.LogoText}>Treact Inc.</LogoText>
           </LogoContainer>
-          <CopywrightNotice>&copy; 2018 Treact Inc. All Rights Reserved.</CopywrightNotice>
-          <SocialLinksContainer>
-            <SocialLink href="https://facebook.com">
-              <FacebookIcon />
+          <CopywrightNotice id={TestId.Footer.CopyrightText}>&copy; 2018 Treact Inc. All Rights Reserved.</CopywrightNotice>
+          <SocialLinksContainer id={TestId.Footer.SocialsContainer}>
+            <SocialLink id={TestId.Footer.SocialsFacebookLink} href="https://facebook.com">
+              <FacebookIcon id={TestId.Footer.SocialsFacebookIcon} />
             </SocialLink>
-            <SocialLink href="https://twitter.com">
-              <TwitterIcon />
+            <SocialLink id={TestId.Footer.SocialsTwitterLink} href="https://twitter.com">
+              <TwitterIcon id={TestId.Footer.SocialsTwitterIcon} />
             </SocialLink>
-            <SocialLink href="https://youtube.com">
-              <YoutubeIcon />
+            <SocialLink id={TestId.Footer.SocialsYouTubeLink} href="https://youtube.com">
+              <YoutubeIcon id={TestId.Footer.SocialsYouTubeIcon} />
             </SocialLink>
           </SocialLinksContainer>
         </ThreeColRow>

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
+import {TestId} from "consts/consts.js"
 //eslint-disable-next-line
 import { css } from "styled-components/macro";
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
@@ -58,7 +59,7 @@ const DecoratorBlob = styled(SvgDecoratorBlob3)`
   ${tw`pointer-events-none absolute right-0 bottom-0 w-64 opacity-25 transform translate-x-32 translate-y-48 `}
 `;
 
-export default ({ cards = null, heading = "Amazing Features", subheading = "Features", description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." }) => {
+export default ({ cards = null, heading = "Innowacyjny produkt", subheading = "Funkcjonalności", description = "Nie korzystasz z miejsca parkingowego w danej chwili ? Wynajmij je i zacznij zarabiać !" }) => {
   /*
    * This componets has an array of object denoting the cards defined below. Each object in the cards array can have the key (Change it according to your need, you can also add more objects to have more cards in this feature component) or you can directly pass this using the cards prop:
    *  1) imageSrc - the image shown at the top of the card
@@ -69,15 +70,19 @@ export default ({ cards = null, heading = "Amazing Features", subheading = "Feat
 
   const defaultCards = [
     {
+      imageSrc: SupportIconImage,
+      title: "Wsparcie 24/7",
+      description: "Jesteśmy dostępni dla Ciebie 24 godziny 7 dni w tygodniu."
+    },
+    { imageSrc: CustomizeIconImage, title: "Analizuj" },
+    { imageSrc: ReliableIconImage, title: "Kontroluj" },
+    { imageSrc: FastIconImage, title: "Parkuj" },
+    { imageSrc: SimpleIconImage, title: "Zarabiaj" },
+    {
       imageSrc: ShieldIconImage,
-      title: "Secure",
+      title: "Bezpieczeństwo",
       description: "We strictly only deal with vendors that provide top notch security."
     },
-    { imageSrc: SupportIconImage, title: "24/7 Support" },
-    { imageSrc: CustomizeIconImage, title: "Customizable" },
-    { imageSrc: ReliableIconImage, title: "Reliable" },
-    { imageSrc: FastIconImage, title: "Fast" },
-    { imageSrc: SimpleIconImage, title: "Easy" }
   ];
 
   if (!cards) cards = defaultCards;
@@ -85,19 +90,19 @@ export default ({ cards = null, heading = "Amazing Features", subheading = "Feat
   return (
     <Container>
       <ThreeColumnContainer>
-        {subheading && <Subheading>{subheading}</Subheading>}
-        <Heading>{heading}</Heading>
-        {description && <Description>{description}</Description>}
+        {subheading && <Subheading id={TestId.Features.Subheader}>{subheading}</Subheading>}
+        <Heading id={TestId.Features.Header}>{heading}</Heading>
+        {description && <Description id={TestId.Features.Description}>{description}</Description>}
         <VerticalSpacer />
         {cards.map((card, i) => (
           <Column key={i}>
-            <Card>
-              <span className="imageContainer">
-                <img src={card.imageSrc || defaultCardImage} alt="" />
+            <Card id={TestId.Features.Card}>
+              <span id={TestId.Features.CardImageContainer} className="imageContainer">
+                <img id={TestId.Features.CardImage} src={card.imageSrc || defaultCardImage} alt="" />
               </span>
-              <span className="textContainer">
-                <span className="title">{card.title || "Fully Secure"}</span>
-                <p className="description">
+              <span id={TestId.Features.CardTextContainer} className="textContainer">
+                <span id={TestId.Features.CardTextTitle} className="title">{card.title || "Fully Secure"}</span>
+                <p id={TestId.Features.CardTextDescription} className="description">
                   {card.description || "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud."}
                 </p>
               </span>

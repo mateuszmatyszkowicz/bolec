@@ -24,12 +24,11 @@ export default () => {
 
   return (
     <AnimationRevealPage>
-      <Hero roundedHeaderButton={true} />
       <Features
-        subheading={<Subheading>Features</Subheading>}
+        subheading={<Subheading>Zaparkowani</Subheading>}
         heading={
           <>
-            We have Amazing <HighlightedText>Service.</HighlightedText>
+            Jedyny taki produkt w <HighlightedText>Polsce.</HighlightedText>
           </>
         }
       />
@@ -138,10 +137,10 @@ export default () => {
         ]}
       /> */}
       <FAQ
-        subheading={<Subheading>FAQS</Subheading>}
+        subheading={<Subheading>FAQs</Subheading>}
         heading={
           <>
-            You have <HighlightedText>Questions ?</HighlightedText>
+            Czy masz jakieś <HighlightedText>pytania ?</HighlightedText>
           </>
         }
         faqs={[
@@ -178,6 +177,7 @@ export default () => {
         ]}
       />
       {/* <GetStarted/> */}
+      <Hero roundedHeaderButton={true} />
       <Footer />
     </AnimationRevealPage>
   );
