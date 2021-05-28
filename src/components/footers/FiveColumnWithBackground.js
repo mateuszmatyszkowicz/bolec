@@ -142,10 +142,10 @@ export default () => {
         <Divider /> */}
         <ThreeColRow>
           <LogoContainer id={TestId.Footer.LogoContainer}>
-            <LogoImg src={LogoImage} id={TestId.Footer.LogoImage} />
-            <LogoText id={TestId.Footer.LogoText}>Treact Inc.</LogoText>
+            {/*<LogoImg src={LogoImage} id={TestId.Footer.LogoImage} />*/}
+            <LogoText id={TestId.Footer.LogoText}>Zaparkowani.</LogoText>
           </LogoContainer>
-          <CopywrightNotice id={TestId.Footer.CopyrightText}>&copy; 2018 Treact Inc. All Rights Reserved.</CopywrightNotice>
+          <CopywrightNotice id={TestId.Footer.CopyrightText}>&copy; 2021 Zaparkowani. All Rights Reserved.</CopywrightNotice>
           <SocialLinksContainer id={TestId.Footer.SocialsContainer}>
             <SocialLink id={TestId.Footer.SocialsFacebookLink} href="https://facebook.com">
               <FacebookIcon id={TestId.Footer.SocialsFacebookIcon} />

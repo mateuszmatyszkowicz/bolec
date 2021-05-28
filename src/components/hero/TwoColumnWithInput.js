@@ -9,6 +9,7 @@ import {TestId} from "consts/consts.js"
 
 import { ReactComponent as SvgDecoratorBlob1 } from "../../images/svg-decorator-blob-1.svg";
 import DesignIllustration from "../../images/design-illustration-2.svg";
+import ParkingCarWoman from "images/parking-car-woman.png"
 import CustomersLogoStripImage from "../../images/customers-logo-strip.png";
 
 const Container = tw.div`relative`;
@@ -70,7 +71,7 @@ export default ({ roundedHeaderButton }) => {
           </LeftColumn>
           <RightColumn>
             <IllustrationContainer id={TestId.Hero.IllustrationContainer}>
-              <img id={TestId.Hero.IllustrationImage} tw="min-w-0 w-full max-w-lg xl:max-w-3xl" src={DesignIllustration} alt="Design Illustration" />
+              <img id={TestId.Hero.IllustrationImage} tw="min-w-0 w-full max-w-lg xl:max-w-3xl" src={ParkingCarWoman} alt="Car vector created by macrovector - www.freepik.com" />
             </IllustrationContainer>
           </RightColumn>
         </TwoColumn>
