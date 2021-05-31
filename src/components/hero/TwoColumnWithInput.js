@@ -49,8 +49,11 @@ export default ({ roundedHeaderButton }) => {
               Jeśli zainteresował <span tw="text-primary-500">Cię</span> nasz produkt - zostaw email. Poinformujemy <span tw="text-primary-500">Cię</span> jak będziemy gotowi !
             </Paragraph>
             <Actions>
-              <input id={TestId.Hero.EmailInput} type="text" placeholder="Podaj Adres E-mail" />
-              <button id={TestId.Hero.EmailButton}>Zapisz się</button>
+              <form name="contact" method="POST" data-netlify="true">
+
+              <input id={TestId.Hero.EmailInput} type="text" name="email" placeholder="Podaj Adres E-mail" />
+              <button id={TestId.Hero.EmailButton} type="submit">Zapisz się</button>
+              </form>
             </Actions>
 {/*            <CustomersLogoStrip>
               <p>Our TRUSTED Customers</p>
