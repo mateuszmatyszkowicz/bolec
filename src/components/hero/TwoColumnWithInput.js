@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
+import {TestId} from "consts/consts.js"
 //eslint-disable-next-line
 // import { css } from "styled-components/macro";
 
 // import Header from "../headers/light.js";
 
 import { ReactComponent as SvgDecoratorBlob1 } from "../../images/svg-decorator-blob-1.svg";
-import DesignIllustration from "../../images/design-illustration-2.svg";
-import CustomersLogoStripImage from "../../images/customers-logo-strip.png";
+import ParkingCarWoman from "images/parking-car-woman.png"
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col lg:flex-row lg:items-center max-w-screen-xl mx-auto py-20 md:py-24`;
@@ -35,16 +35,6 @@ const DecoratorBlob1 = styled(SvgDecoratorBlob1)`
   ${tw`pointer-events-none opacity-5 absolute left-0 bottom-0 h-64 w-64 transform -translate-x-2/3 -z-10`}
 `;
 
-const CustomersLogoStrip = styled.div`
-  ${tw`mt-12 lg:mt-20`}
-  p {
-    ${tw`uppercase text-sm lg:text-xs tracking-wider font-bold text-gray-500`}
-  }
-  img {
-    ${tw`mt-4 w-full lg:pr-16 xl:pr-32 opacity-50`}
-  }
-`;
-
 export default ({ roundedHeaderButton }) => {
   return (
     <>
@@ -52,25 +42,24 @@ export default ({ roundedHeaderButton }) => {
       <Container>
         <TwoColumn>
           <LeftColumn>
-            <Heading>
-              Beautiful React Templates <span tw="text-primary-500">for you.</span>
+            <Heading id={TestId.Hero.Header}>
+              Startujemy już <span tw="text-primary-500">wkrótce !</span>
             </Heading>
-            <Paragraph>
-              Our templates are easy to setup, understand and customize. Fully modular components with a variety of
-              pages and components.
+            <Paragraph id={TestId.Hero.Paragraph}>
+              Jeśli zainteresował <span tw="text-primary-500">Cię</span> nasz produkt - zostaw email. Poinformujemy <span tw="text-primary-500">Cię</span> jak będziemy gotowi !
             </Paragraph>
             <Actions>
-              <input type="text" placeholder="Your E-mail Address" />
-              <button>Get Started</button>
+              <input id={TestId.Hero.EmailInput} type="text" placeholder="Podaj Adres E-mail" />
+              <button id={TestId.Hero.EmailButton}>Zapisz się</button>
             </Actions>
-            <CustomersLogoStrip>
+{/*            <CustomersLogoStrip>
               <p>Our TRUSTED Customers</p>
               <img src={CustomersLogoStripImage} alt="Our Customers" />
-            </CustomersLogoStrip>
+            </CustomersLogoStrip>*/}
           </LeftColumn>
           <RightColumn>
-            <IllustrationContainer>
-              <img tw="min-w-0 w-full max-w-lg xl:max-w-3xl" src={DesignIllustration} alt="Design Illustration" />
+            <IllustrationContainer id={TestId.Hero.IllustrationContainer}>
+              <img id={TestId.Hero.IllustrationImage} tw="min-w-0 w-full max-w-lg xl:max-w-3xl" src={ParkingCarWoman} alt="Car vector created by macrovector - www.freepik.com" />
             </IllustrationContainer>
           </RightColumn>
         </TwoColumn>

@@ -2,8 +2,8 @@ import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
+import {TestId} from "consts/consts.js"
 
-import LogoImage from "images/logo-light.svg";
 import { ReactComponent as FacebookIcon } from "images/facebook-icon.svg";
 import { ReactComponent as TwitterIcon } from "images/twitter-icon.svg";
 import { ReactComponent as YoutubeIcon } from "images/youtube-icon.svg";
@@ -26,7 +26,6 @@ const Content = tw.div`max-w-screen-xl mx-auto relative z-10`;
 const ThreeColRow = tw.div`flex flex-col md:flex-row items-center justify-between`;
 
 const LogoContainer = tw.div`flex items-center justify-center md:justify-start`;
-const LogoImg = tw.img`w-8`;
 const LogoText = tw.h5`ml-2 text-xl font-black tracking-wider text-gray-100`;
 
 const CopywrightNotice = tw.p`text-center text-sm sm:text-base mt-8 md:mt-0 font-medium text-gray-400`;
@@ -140,20 +139,20 @@ export default () => {
         </FiveColumns>
         <Divider /> */}
         <ThreeColRow>
-          <LogoContainer>
-            <LogoImg src={LogoImage} />
-            <LogoText>Treact Inc.</LogoText>
+          <LogoContainer id={TestId.Footer.LogoContainer}>
+            {/*<LogoImg src={LogoImage} id={TestId.Footer.LogoImage} />*/}
+            <LogoText id={TestId.Footer.LogoText}>Zaparkowani.</LogoText>
           </LogoContainer>
-          <CopywrightNotice>&copy; 2018 Treact Inc. All Rights Reserved.</CopywrightNotice>
-          <SocialLinksContainer>
-            <SocialLink href="https://facebook.com">
-              <FacebookIcon />
+          <CopywrightNotice id={TestId.Footer.CopyrightText}>&copy; 2021 Zaparkowani. All Rights Reserved.</CopywrightNotice>
+          <SocialLinksContainer id={TestId.Footer.SocialsContainer}>
+            <SocialLink id={TestId.Footer.SocialsFacebookLink} href="https://facebook.com">
+              <FacebookIcon id={TestId.Footer.SocialsFacebookIcon} />
             </SocialLink>
-            <SocialLink href="https://twitter.com">
-              <TwitterIcon />
+            <SocialLink id={TestId.Footer.SocialsTwitterLink} href="https://twitter.com">
+              <TwitterIcon id={TestId.Footer.SocialsTwitterIcon} />
             </SocialLink>
-            <SocialLink href="https://youtube.com">
-              <YoutubeIcon />
+            <SocialLink id={TestId.Footer.SocialsYouTubeLink} href="https://youtube.com">
+              <YoutubeIcon id={TestId.Footer.SocialsYouTubeIcon} />
             </SocialLink>
           </SocialLinksContainer>
         </ThreeColRow>

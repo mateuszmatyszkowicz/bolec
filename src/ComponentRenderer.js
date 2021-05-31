@@ -2,13 +2,13 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import AnimationRevealPage from "helpers/AnimationRevealPage.js"
 
-import EventLandingPage from "demos/EventLandingPage.js";
-import HotelTravelLandingPage from "demos/HotelTravelLandingPage.js";
-import AgencyLandingPage from "demos/AgencyLandingPage.js";
+import EventLandingPage from "src/demos/not-used/EventLandingPage.js";
+import HotelTravelLandingPage from "src/demos/not-used/HotelTravelLandingPage.js";
+import AgencyLandingPage from "src/demos/not-used/AgencyLandingPage.js";
 import SaaSProductLandingPage from "demos/SaaSProductLandingPage.js";
-import RestaurantLandingPage from "demos/RestaurantLandingPage.js";
-import ServiceLandingPage from "demos/ServiceLandingPage.js";
-import HostingCloudLandingPage from "demos/HostingCloudLandingPage.js";
+import RestaurantLandingPage from "src/demos/not-used/RestaurantLandingPage.js";
+import ServiceLandingPage from "src/demos/not-used/ServiceLandingPage.js";
+import HostingCloudLandingPage from "src/demos/not-used/HostingCloudLandingPage.js";
 
 import EventLandingPageImageSrc from "images/demo/EventLandingPage.jpeg";
 import HotelTravelLandingPageImageSrc from "images/demo/HotelTravelLandingPage.jpeg";
@@ -45,9 +45,9 @@ import FullWidthWithImageHero from "components/hero/FullWidthWithImage.js";
 import BackgroundAsImageWithCenteredContentHero from "components/hero/BackgroundAsImageWithCenteredContent.js";
 import IllustrationAndPrimaryBackgroundHero from "components/hero/TwoColumnWithPrimaryBackground.js";
 
-import TwoPlansWithDurationSwitcherPricing from "components/pricing/TwoPlansWithDurationSwitcher.js";
-import ThreePlansWithHalfPrimaryBackgroundPricing from "components/pricing/ThreePlansWithHalfPrimaryBackground.js";
-import ThreePlansPricing from "components/pricing/ThreePlans.js";
+import TwoPlansWithDurationSwitcherPricing from "components/not-used/pricing/TwoPlansWithDurationSwitcher.js";
+import ThreePlansWithHalfPrimaryBackgroundPricing from "components/not-used/pricing/ThreePlansWithHalfPrimaryBackground.js";
+import ThreePlansPricing from "components/not-used/pricing/ThreePlans.js";
 
 import ThreeColWithSideImageFeatures from "components/features/ThreeColWithSideImage.js";
 import TwoColWithButtonFeatures from "components/features/TwoColWithButton.js";
@@ -62,36 +62,36 @@ import WithStatsAndImageFeatures from "components/features/TwoColSingleFeatureWi
 import WithStatsAndImage2Features from "components/features/TwoColSingleFeatureWithStats2.js";
 import VerticalWithAlternateImageAndTextFeatures from "components/features/VerticalWithAlternateImageAndText.js";
 
-import SliderCards from "components/cards/ThreeColSlider.js";
-import TrendingCards from "components/cards/TwoTrendingPreviewCardsWithImage.js";
-import PortfolioCards from "components/cards/PortfolioTwoCardsWithImage.js";
-import TabGridCards from "components/cards/TabCardGrid.js";
-import ProfileThreeColGridCards from "components/cards/ProfileThreeColGrid.js"
-import ThreeColContactDetailsCards from "components/cards/ThreeColContactDetails.js"
+import SliderCards from "components/not-used/cards/ThreeColSlider.js";
+import TrendingCards from "components/not-used/cards/TwoTrendingPreviewCardsWithImage.js";
+import PortfolioCards from "components/not-used/cards/PortfolioTwoCardsWithImage.js";
+import TabGridCards from "components/not-used/cards/TabCardGrid.js";
+import ProfileThreeColGridCards from "components/not-used/cards/ProfileThreeColGrid.js"
+import ThreeColContactDetailsCards from "components/not-used/cards/ThreeColContactDetails.js"
 
-import ThreeColSimpleWithImageBlog from "components/blogs/ThreeColSimpleWithImage.js";
-import ThreeColSimpleWithImageAndDashedBorderBlog from "components/blogs/ThreeColSimpleWithImageAndDashedBorder.js";
-import PopularAndRecentPostsBlog from "components/blogs/PopularAndRecentBlogPosts.js";
-import GridWithFeaturedPostBlog from "components/blogs/GridWithFeaturedPost.js";
+import ThreeColSimpleWithImageBlog from "components/not-used/blogs/ThreeColSimpleWithImage.js";
+import ThreeColSimpleWithImageAndDashedBorderBlog from "components/not-used/blogs/ThreeColSimpleWithImageAndDashedBorder.js";
+import PopularAndRecentPostsBlog from "components/not-used/blogs/PopularAndRecentBlogPosts.js";
+import GridWithFeaturedPostBlog from "components/not-used/blogs/GridWithFeaturedPost.js";
 
-import TwoColumnWithImageTestimonial from "components/testimonials/TwoColumnWithImage.js";
-import TwoColumnWithImageAndProfilePictureReviewTestimonial from "components/testimonials/TwoColumnWithImageAndProfilePictureReview.js";
-import TwoColumnWithImageAndRatingTestimonial from "components/testimonials/TwoColumnWithImageAndRating.js";
-import ThreeColumnWithProfileImageTestimonial from "components/testimonials/ThreeColumnWithProfileImage.js";
-import SimplePrimaryBackgroundTestimonial from "components/testimonials/SimplePrimaryBackground.js";
+import TwoColumnWithImageTestimonial from "components/not-used/testimonials/TwoColumnWithImage.js";
+import TwoColumnWithImageAndProfilePictureReviewTestimonial from "components/not-used/testimonials/TwoColumnWithImageAndProfilePictureReview.js";
+import TwoColumnWithImageAndRatingTestimonial from "components/not-used/testimonials/TwoColumnWithImageAndRating.js";
+import ThreeColumnWithProfileImageTestimonial from "components/not-used/testimonials/ThreeColumnWithProfileImage.js";
+import SimplePrimaryBackgroundTestimonial from "components/not-used/testimonials/SimplePrimaryBackground.js";
 
 import SimpleWithSideImageFAQS from "components/faqs/SimpleWithSideImage.js";
 import SingleColFAQS from "components/faqs/SingleCol.js";
 import TwoColumnPrimaryBackgroundFAQS from "components/faqs/TwoColumnPrimaryBackground.js";
 
-import SimpleContactUsForm from "components/forms/SimpleContactUs.js";
-import SimpleSubscribeNewsletterForm from "components/forms/SimpleSubscribeNewsletter.js";
-import TwoColContactUsForm from "components/forms/TwoColContactUsWithIllustration.js";
-import TwoColContactUsFullForm from "components/forms/TwoColContactUsWithIllustrationFullForm.js";
+import SimpleContactUsForm from "components/not-used/forms/SimpleContactUs.js";
+import SimpleSubscribeNewsletterForm from "components/not-used/forms/SimpleSubscribeNewsletter.js";
+import TwoColContactUsForm from "components/not-used/forms/TwoColContactUsWithIllustration.js";
+import TwoColContactUsFullForm from "components/not-used/forms/TwoColContactUsWithIllustrationFullForm.js";
 
-import GetStartedCTA from "components/cta/GetStarted.js";
-import GetStartedLightCTA from "components/cta/GetStartedLight.js";
-import DownloadAppCTA from "components/cta/DownloadApp.js";
+import GetStartedCTA from "components/not-used/cta/GetStarted.js";
+import GetStartedLightCTA from "components/not-used/cta/GetStartedLight.js";
+import DownloadAppCTA from "components/not-used/cta/DownloadApp.js";
 
 import SimpleFiveColumnFooter from "components/footers/SimpleFiveColumn.js";
 import FiveColumnWithInputFormFooter from "components/footers/FiveColumnWithInputForm.js";
@@ -370,7 +370,7 @@ export const components = {
           component: ThreeColSimpleWithImageAndDashedBorderBlog,
           url: "/components/blocks/Blog/ThreeColSimpleWithImageAndDashedBorder",
         },
-      } 
+      }
     },
 
     Testimonial: {

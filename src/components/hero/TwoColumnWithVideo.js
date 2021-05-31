@@ -6,8 +6,8 @@ import { css } from "styled-components/macro";
 
 import Header from "../headers/light.js";
 
-import ReactModalAdapter from "../../helpers/ReactModalAdapter.js";
-import ResponsiveVideoEmbed from "../../helpers/ResponsiveVideoEmbed.js";
+import ReactModalAdapter from "../../helpers/not-used/ReactModalAdapter.js";
+import ResponsiveVideoEmbed from "../../helpers/not-used/ResponsiveVideoEmbed.js";
 
 import { ReactComponent as PlayIcon } from "feather-icons/dist/icons/play-circle.svg";
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
