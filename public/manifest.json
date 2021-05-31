@@ -1,9 +1,9 @@
 {
-  "short_name": "Treact",
-  "name": "Treact - Modern React Templates and Components for building Landing Pages",
+  "short_name": "Zaparkowani",
+  "name": "Miejsca parkingowe dostępne w każdym mieście wojewódzkim. Możliwość wynajęcia parkingu naziemnego, garażu podziemnego i innych miejsc parkingowych. Parkuj w każdym mieście w Polsce!",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "logoZaparkowani.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
@@ -16,6 +16,11 @@
       "src": "logo512.png",
       "type": "image/png",
       "sizes": "512x512"
+    },
+    {
+      "src": "logoZaparkowani.png",
+      "type": "image/png",
+      "sizes": "200x200"
     }
   ],
   "start_url": ".",
