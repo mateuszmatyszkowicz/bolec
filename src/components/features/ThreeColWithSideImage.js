@@ -93,7 +93,7 @@ export default ({ cards = null, heading = "Innowacyjny produkt", subheading = "F
     {
       imageSrc: ShieldIconImage,
       title: "Otrzymaj",
-      description: "miejsca gdziekolwiek jesteś w całej Polsce."
+      description: "Miejsca gdziekolwiek jesteś w całej Polsce."
     },
   ];
 
