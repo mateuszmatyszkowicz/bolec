@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import {TestId} from "consts/consts.js"
 
-import LogoImage from "images/logo-light.svg";
 import { ReactComponent as FacebookIcon } from "images/facebook-icon.svg";
 import { ReactComponent as TwitterIcon } from "images/twitter-icon.svg";
 import { ReactComponent as YoutubeIcon } from "images/youtube-icon.svg";
@@ -27,7 +26,6 @@ const Content = tw.div`max-w-screen-xl mx-auto relative z-10`;
 const ThreeColRow = tw.div`flex flex-col md:flex-row items-center justify-between`;
 
 const LogoContainer = tw.div`flex items-center justify-center md:justify-start`;
-const LogoImg = tw.img`w-8`;
 const LogoText = tw.h5`ml-2 text-xl font-black tracking-wider text-gray-100`;
 
 const CopywrightNotice = tw.p`text-center text-sm sm:text-base mt-8 md:mt-0 font-medium text-gray-400`;
