@@ -45,5 +45,20 @@ export const TestId = {
         CardTextContainer: "features_card_text_container",
         CardTextTitle: "features_card_text_title",
         CardTextDescription: "features_card_text_description"
+    },
+
+    AdditionalFeatures: {
+        Header: "additional_features_header",
+        Subheader: "additional_features_subheader",
+        Steps: "additional_features_steps",
+        Step: "additional_features_step",
+        StepNumber: "additional_features_step_number",
+        StepText: "additional_features_step_text",
+        StepHeader: "additional_features_step_header",
+        StepDescription: "additional_features_step_description",
+        TextContent: "additional_features_text_content",
+        TextColumn: "additional_features_text_column",
+        Image: "additional_features_image",
+        ImageColumn: "additional_features_image_column"
     }
 };

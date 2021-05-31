@@ -5,6 +5,7 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import TeamIllustrationSrc from "images/team-illustration-2.svg";
 import { ReactComponent as SvgDotPattern } from "images/dot-pattern.svg";
+import {TestId} from "consts/consts.js"
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center`;
@@ -77,21 +78,21 @@ export default ({
   return (
     <Container>
       <TwoColumn>
-        <ImageColumn>
-          <Image src={imageSrc} imageBorder={imageBorder} imageShadow={imageShadow} imageRounded={imageRounded} />
+        <ImageColumn id={TestId.AdditionalFeatures.ImageColumn}>
+          <Image id={TestId.AdditionalFeatures.Image} src={imageSrc} imageBorder={imageBorder} imageShadow={imageShadow} imageRounded={imageRounded} />
           {imageDecoratorBlob && <DecoratorBlob css={decoratorBlobCss} />}
         </ImageColumn>
-        <TextColumn textOnLeft={textOnLeft}>
-          <TextContent>
-            <Subheading>{subheading}</Subheading>
-            <Heading>{heading}</Heading>
-            <Steps>
+        <TextColumn id={TestId.AdditionalFeatures.TextColumn} textOnLeft={textOnLeft}>
+          <TextContent id={TestId.AdditionalFeatures.TextContent}>
+            <Subheading id={TestId.AdditionalFeatures.Subheader}>{subheading}</Subheading>
+            <Heading id={TestId.AdditionalFeatures.Header}>{heading}</Heading>
+            <Steps id={TestId.AdditionalFeatures.Steps}>
               {steps.map((step, index) => (
-                <Step key={index}>
-                  <StepNumber>{(index+1).toString().padStart(2,'0')}</StepNumber>
-                  <StepText>
-                    <StepHeading>{step.heading}</StepHeading>
-                    <StepDescription>{step.description}</StepDescription>
+                <Step id={TestId.AdditionalFeatures.Step} key={index} >
+                  <StepNumber id={TestId.AdditionalFeatures.StepNumber}>{(index+1).toString().padStart(2,'0')}</StepNumber>
+                  <StepText id={TestId.AdditionalFeatures.StepText}>
+                    <StepHeading id={TestId.AdditionalFeatures.StepHeader}>{step.heading}</StepHeading>
+                    <StepDescription id={TestId.AdditionalFeatures.StepDescription}>{step.description}</StepDescription>
                   </StepText>
                 </Step>
               ))}
