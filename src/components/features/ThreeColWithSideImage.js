@@ -59,7 +59,7 @@ const DecoratorBlob = styled(SvgDecoratorBlob3)`
   ${tw`pointer-events-none absolute right-0 bottom-0 w-64 opacity-25 transform translate-x-32 translate-y-48 `}
 `;
 
-export default ({ cards = null, heading = "Innowacyjny produkt", subheading = "Funkcjonalności", description = "Nie korzystasz z miejsca parkingowego w danej chwili ? Wynajmij je i zacznij zarabiać !" }) => {
+export default ({ cards = null, heading = "Innowacyjny produkt", subheading = "Funkcjonalności", description = "Nie korzystasz z miejsca parkingowego w danej chwili? Wynajmij je i zacznij zarabiać!" }) => {
   /*
    * This componets has an array of object denoting the cards defined below. Each object in the cards array can have the key (Change it according to your need, you can also add more objects to have more cards in this feature component) or you can directly pass this using the cards prop:
    *  1) imageSrc - the image shown at the top of the card
@@ -71,17 +71,29 @@ export default ({ cards = null, heading = "Innowacyjny produkt", subheading = "F
   const defaultCards = [
     {
       imageSrc: SupportIconImage,
-      title: "Wsparcie 24/7",
-      description: "Jesteśmy dostępni dla Ciebie 24 godziny 7 dni w tygodniu."
+      title: "Bądź na bieżąco",
+      description: "...i otrzymuj powiadomienia o potencjalnych najemcach."
     },
-    { imageSrc: CustomizeIconImage, title: "Analizuj" },
-    { imageSrc: ReliableIconImage, title: "Kontroluj" },
-    { imageSrc: FastIconImage, title: "Parkuj" },
-    { imageSrc: SimpleIconImage, title: "Zarabiaj" },
+    {
+      imageSrc: CustomizeIconImage,
+      title: "Analizuj",
+      description: "Opłacalność, czas i korzyści." },
+    {
+      imageSrc: ReliableIconImage,
+      title: "Kontroluj",
+      description: "Kto i kiedy parkuje na Twoim miejscu." },
+    {
+      imageSrc: FastIconImage,
+      title: "Parkuj",
+      description: "Kupuj bilety na postój bez wychodzenia z samochodu." },
+    {
+      imageSrc: SimpleIconImage,
+      title: "Zarabiaj",
+      description: "Na udostępnianiu swojego miejsca kiedy chcesz i jak długo chcesz."},
     {
       imageSrc: ShieldIconImage,
-      title: "Bezpieczeństwo",
-      description: "We strictly only deal with vendors that provide top notch security."
+      title: "Otrzymaj",
+      description: "miejsca gdziekolwiek jesteś w całej Polsce."
     },
   ];
 

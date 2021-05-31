@@ -43,10 +43,10 @@ export default ({ roundedHeaderButton }) => {
         <TwoColumn>
           <LeftColumn>
             <Heading id={TestId.Hero.Header}>
-              Startujemy już <span tw="text-primary-500">wkrótce !</span>
+              Startujemy już <span tw="text-primary-500">wkrótce</span>!
             </Heading>
             <Paragraph id={TestId.Hero.Paragraph}>
-              Jeśli zainteresował <span tw="text-primary-500">Cię</span> nasz produkt - zostaw email. Poinformujemy <span tw="text-primary-500">Cię</span> jak będziemy gotowi !
+              Gotowy do <span tw="text-primary-500">współpracy</span>? Zostaw nam swój adres e-mail, a poinformujemy <span tw="text-primary-500">Cię</span> gdy tylko będziemy gotowi!
             </Paragraph>
             <Actions>
               <form name="contact" method="POST" data-netlify="true">

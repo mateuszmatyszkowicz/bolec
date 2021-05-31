@@ -40,10 +40,10 @@ const StepHeading = tw.h6`leading-none text-xl font-semibold`;
 const StepDescription = tw.p`mt-3 max-w-xs leading-loose text-sm text-gray-600 font-medium`;
 
 export default ({
-  subheading = "Our Expertise",
+  subheading = "Od kierowców dla kierowców",
   heading = (
     <>
-      Designed & Developed by <span tw="text-primary-500">Professionals.</span>
+      Co wyróżnia nasz <span tw="text-primary-500">produkt</span>?
     </>
   ),
   imageSrc = TeamIllustrationSrc,
@@ -59,16 +59,16 @@ export default ({
 
   const defaultSteps = [
     {
-      heading: "Register",
-      description: "Create an account with us using Google or Facebook."
+      heading: "Bezpieczeństwo",
+      description: "Bądź swiadomoy, kto i kiedy parkuje na Twoim miejscu!"
     },
     {
-      heading: "Download",
-      description: "Browse and Download the template that you like from the marketplace."
+      heading: "Zysk",
+      description: "Możliwość wynajmu na dni, godziny, minuty bądź lata!"
     },
     {
-      heading: "Run",
-      description: "Follow the instructions to setup and customize the template to your needs."
+      heading: "Dostępność",
+      description: "Gwarancja miejsca gdziekolwiek jesteś - dostępne w całej Polsce!"
     }
   ];
 

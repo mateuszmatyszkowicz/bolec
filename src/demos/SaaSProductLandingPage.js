@@ -4,13 +4,13 @@ import tw from "twin.macro";
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import Hero from "components/hero/TwoColumnWithInput.js";
 import Features from "components/features/ThreeColWithSideImage.js";
-// import MainFeature from "components/features/TwoColWithButton.js";
-// import MainFeature2 from "components/features/TwoColWithTwoHorizontalFeaturesAndButton.js";
-// import FeatureWithSteps from "components/features/TwoColWithSteps.js";
-// import Pricing from "components/pricing/ThreePlans.js";
+//import MainFeature from "components/features/TwoColWithButton.js";
+//import MainFeature2 from "components/features/TwoColWithTwoHorizontalFeaturesAndButton.js";
+import FeatureWithSteps from "components/features/TwoColWithSteps.js";
+import Pricing from "components/not-used/pricing/ThreePlans.js";
 // import Testimonial from "components/testimonials/TwoColumnWithImageAndRating.js";
 import FAQ from "components/faqs/SingleCol.js";
-// import GetStarted from "components/cta/GetStarted";
+import GetStarted from "components/not-used/cta/GetStarted";
 import Footer from "components/footers/FiveColumnWithBackground.js";
 // import heroScreenshotImageSrc from "images/hero-screenshot-1.png";
 // import macHeroScreenshotImageSrc from "images/hero-screenshot-2.png";
@@ -24,14 +24,16 @@ export default () => {
 
   return (
     <AnimationRevealPage>
+      <Hero roundedHeaderButton={true} />
       <Features
         subheading={<Subheading>Zaparkowani</Subheading>}
         heading={
           <>
-            Jedyny taki produkt w <HighlightedText>Polsce.</HighlightedText>
+            Jedyny taki produkt w <HighlightedText>Polsce</HighlightedText>.
           </>
         }
       />
+      <FeatureWithSteps/>
       {/* <MainFeature
         subheading={<Subheading>Quality Work</Subheading>}
         imageSrc={heroScreenshotImageSrc}
@@ -140,44 +142,44 @@ export default () => {
         subheading={<Subheading>FAQs</Subheading>}
         heading={
           <>
-            Czy masz jakieś <HighlightedText>pytania ?</HighlightedText>
+            Czy masz jakieś <HighlightedText>pytania</HighlightedText>?
           </>
         }
         faqs={[
           {
-            question: "Are all the templates easily customizable ?",
+            question: "W jakich miastach produkt będzie dostępny?",
             answer:
-              "Yes, they all are. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            "Na początku planujemy uruchomienie produktu w każdym dużym mieście wojewódzkim. Następnym krokiem będzie wprowadzenie produktu do reszty miast - tak by był dostępny w całej Polsce."
           },
           {
-            question: "How long do you usually support an standalone template for ?",
+            question: "Dla kogo jest ten produkt?",
             answer:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            "Produkt jest skierowany do osób, które posiadają miejsca parkingowe i chciałby je wynająć, a także do osób, które szukają miejsca parkingowego do wynajęcia krótko bądź długo terminowo"
           },
           {
-            question: "What kind of payment methods do you accept ?",
+            question: "W jaki sposób będę mógł wynająć miejsce parkingowego?",
             answer:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            "Jeśli wyrazisz chęć wynajęcia danego miejsca parkingowego - wyślemy powiadomienie do właściciela, następnie pozostaje uiścić opłatę za postój na tym miejscu."
           },
           {
-            question: "Is there a subscribption service to get the latest templates ?",
+            question: "Czy będę miał dostęp do statystyk mojego miejsca parkingowego?",
             answer:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            "Tak, będziemy przygotowywać specjalny panel, w którym będzie można śledzić statystyki dla konkretnego miejsca parkingowego np. ile osób parkowało, ile dane miejsce przyniosło przychodu itd."
           },
           {
-            question: "Are the templates compatible with the React ?",
+            question: "W jaki sposób zostanę poinformowany o osobie zainteresowanej wynajęciem mojego miejsca parkingowego?",
             answer:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            "Będziemy informować o zainteresowaniu Twoim miejscem drogą mailową, SMSową i notyfikacjami w aplikacji."
           },
           {
-            question: "Do you really support Internet Explorer 11 ?",
+            question: "Czy produkt będzie płatny? Jeśli tak, to jakie metody płatności będą dostępne?",
             answer:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            "Pierwsze trzy miesiące korzystania będą darmowe. Następnie planujemy wprowadzić subskrypcje, za którą będzie można zapłacić kartą kredytową, blikiem bądź przelewem bankowym."
           }
         ]}
       />
-      {/* <GetStarted/> */}
-      <Hero roundedHeaderButton={true} />
+      {/*<GetStarted/>*/}
+      {/*<Pricing/>*/}
       <Footer />
     </AnimationRevealPage>
   );

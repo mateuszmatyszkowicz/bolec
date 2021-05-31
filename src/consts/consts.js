@@ -15,7 +15,7 @@ export const TestId = {
     Footer: {
         LogoContainer: "footer_logo_container",
         LogoImage: "footer_logo_image",
-        LogoText: "footer_logo_text",
+        MailTo: "footer_hello_mail",
         CopyrightText: "footer_copyright_text",
         SocialsContainer: "footer_socials_container",
         SocialsFacebookLink: "footer_socials_facebook_link",
