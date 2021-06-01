@@ -4,7 +4,7 @@ class HomePageObjects {
      */
     constructor() {
         this.objectsMap = new Map();
-        this.url = 'http://localhost:3000/'
+        this.url = 'https://zaparkowani.com/'
 
     }
 

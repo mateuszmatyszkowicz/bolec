@@ -6,11 +6,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "cy:run-dashboard": "cypress run --record --key d38f2ae7-2cb4-4109-8023-bd89b23bbfb8",
-    "cy:run-dashboard-headless-chrome": "cypress run --browser chrome --headless --record --key d38f2ae7-2cb4-4109-8023-bd89b23bbfb8",
-    "cy:run-dashboard-headless-firefox": "cypress run --browser firefox --headless --record --key d38f2ae7-2cb4-4109-8023-bd89b23bbfb8",
-    "cy:run-dashboard-headless-electron": "cypress run --browser electron --headless --record --key d38f2ae7-2cb4-4109-8023-bd89b23bbfb8",
-    "cy:run-dashboard-mobile": "cypress run --config viewportWidth=320,viewportHeight=568 --record --key d38f2ae7-2cb4-4109-8023-bd89b23bbfb8",
+    "cy:run-dashboard": "cypress run --record --key 3b7db46c-64e1-4fb8-a812-4e8ea84c6bd4",
+    "cy:run-dashboard-headless-chrome": "cypress run --browser chrome --headless --record --key 3b7db46c-64e1-4fb8-a812-4e8ea84c6bd4",
+    "cy:run-dashboard-headless-firefox": "cypress run --browser firefox --headless --record --key 3b7db46c-64e1-4fb8-a812-4e8ea84c6bd4",
+    "cy:run-dashboard-headless-electron": "cypress run --browser electron --headless --record --key 3b7db46c-64e1-4fb8-a812-4e8ea84c6bd4",
+    "cy:run-dashboard-mobile": "cypress run --config viewportWidth=320,viewportHeight=568 --record --key 3b7db46c-64e1-4fb8-a812-4e8ea84c6bd4",
     "cy:run-headless": "cypress run --headless"
   },
   "dependencies": {
