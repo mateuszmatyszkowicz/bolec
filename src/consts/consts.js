@@ -14,9 +14,9 @@ export const TestId = {
         QuestionText: "faq_question_text",
         QuestionToggleIcon: "faq_question_toggle_icon",
         QuestionAnswer: "faq_question_answer",
-        DecoratorBlobContainer: "footer_decorator_blob_container",
-        FirstDecoratorBlob: "footer_first_decorator_blob",
-        SecondDecoratorBlob: "footer_second_decorator_blob"
+        DecoratorBlobContainer: "faq_decorator_blob_container",
+        FirstDecoratorBlob: "faq_first_decorator_blob",
+        SecondDecoratorBlob: "faq_second_decorator_blob"
     },
 
     Footer: {
@@ -51,7 +51,7 @@ export const TestId = {
         EmailButton: "hero_email_button",
         IllustrationContainer: "hero_illustration_container",
         IllustrationImage: "hero_illustration_image",
-        FirstDecoratorBlob: "footer_first_decorator_blob",
+        FirstDecoratorBlob: "hero_first_decorator_blob",
     },
 
     Features: {

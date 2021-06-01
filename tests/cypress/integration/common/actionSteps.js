@@ -6,7 +6,7 @@ const {checkConstsInMap} = require('../common/consts/index');
 /**
  *
  */
-When(/^I (double click|click) on (.*) (first element|last element|element)$/, (condition, selectorValue, selectedOption) => {
+When(/^I (double click|click) on (.*) - (first element|last element|element)$/, (condition, selectorValue, selectedOption) => {
     const elementName = checkObjectsInMap(`${selectorValue}`);
 
     if (selectedOption === 'last element' && condition === 'click') {
@@ -81,7 +81,7 @@ When(/^I press (.+) on keyboard in (.*) element$/, (selectorValue, keyboardKeyVa
 When(/I scroll to (.*)$/, (selectorValue) => {
     const elementName = checkObjectsInMap(`${selectorValue}`);
 
-    cy.get(elementName).scrollTo('center');
+    cy.get(elementName).scrollTo('bottom', { ensureScrollable: false })
 });
 
 /**
@@ -164,6 +164,24 @@ When(/I scroll into view of (.*)$/, (selectorValue) => {
     const elementName = checkObjectsInMap(`${selectorValue}`);
 
     cy.scrollIntoView(elementName);
+});
+
+/**
+ *
+ */
+When(/I move to the (top|bottom|center) viewport of the page$/, (condition) => {
+
+    if (condition === 'bottom') {
+        cy.scrollTo('bottom');
+    }
+
+    if (condition === 'top') {
+        cy.scrollTo('top');
+    }
+
+    if (condition === 'center') {
+        cy.scrollTo('center');
+    }
 });
 
 /**
