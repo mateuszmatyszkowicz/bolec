@@ -72,10 +72,10 @@ export default ({
   };
 
   return (
-    <Container>
-      <ContentWithPaddingXl>
-        <Column>
-          <HeaderContent>
+    <Container id={TestId.FAQ.FAQ}>
+      <ContentWithPaddingXl id={TestId.FAQ.ContentPadding}>
+        <Column id={TestId.FAQ.ContentColumn}>
+          <HeaderContent id={TestId.FAQ.HeaderContent}>
             {subheading && <Subheading id={TestId.FAQ.Subheader}>{subheading}</Subheading>}
             <Heading id={TestId.FAQ.Header}>{heading}</Heading>
             {description && <Description id={TestId.FAQ.Description}>{description}</Description>}
@@ -123,8 +123,8 @@ export default ({
           </FAQSContainer>
         </Column>
       </ContentWithPaddingXl>
-      <DecoratorBlob1/>
-      <DecoratorBlob2 />
+      <DecoratorBlob1 id={TestId.FAQ.FirstDecoratorBlob}/>
+      <DecoratorBlob2 id={TestId.FAQ.SecondDecoratorBlob} />
     </Container>
   );
 };

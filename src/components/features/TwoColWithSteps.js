@@ -76,8 +76,8 @@ export default ({
   if (!steps) steps = defaultSteps;
 
   return (
-    <Container>
-      <TwoColumn>
+    <Container id={TestId.AdditionalFeatures.AdditionalFeatures}>
+      <TwoColumn id={TestId.AdditionalFeatures.TwoColumns}>
         <ImageColumn id={TestId.AdditionalFeatures.ImageColumn}>
           <Image id={TestId.AdditionalFeatures.Image} src={imageSrc} imageBorder={imageBorder} imageShadow={imageShadow} imageRounded={imageRounded} alt={"People icons"} />
           {imageDecoratorBlob && <DecoratorBlob css={decoratorBlobCss} />}

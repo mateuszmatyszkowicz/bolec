@@ -1,0 +1,17 @@
+{
+  "testFiles": "**/*.feature",
+  "ignoreTestFiles": [
+    "*.js",
+    "*.md"
+  ],
+  "retries": {
+    "runMode": 1,
+    "openMode": 0
+  },
+  "viewportHeight": 1200,
+  "viewportWidth": 1600,
+  "video": true,
+  "waitForAnimations": true,
+  "projectId": "ai6kin",
+  "defaultCommandTimeout": 10000
+}

@@ -48,8 +48,8 @@ const DecoratorBlob2 = tw(
 
 export default () => {
   return (
-    <Container>
-      <Content>
+    <Container id={TestId.Footer.Footer}>
+      <Content id={TestId.Footer.FooterContent}>
         {/* <FiveColumns>
           <Column>
             <ColumnHeading>Main</ColumnHeading>
@@ -138,7 +138,7 @@ export default () => {
           </Column>
         </FiveColumns>
         <Divider /> */}
-        <ThreeColRow>
+        <ThreeColRow id={TestId.Footer.SocialColumn}>
           <LogoContainer id={TestId.Footer.LogoContainer}>
             {/*<LogoImg src={LogoImage} id={TestId.Footer.LogoImage} />*/}
             <a id={TestId.Footer.MailTo} href="mailto:hello@zaparkowani.com">hello@zaparkowani.com</a>
@@ -157,9 +157,9 @@ export default () => {
           </SocialLinksContainer>
         </ThreeColRow>
       </Content>
-      <DecoratorBlobContainer>
-        <DecoratorBlob1 />
-        <DecoratorBlob2 />
+      <DecoratorBlobContainer id={TestId.Footer.DecoratorBlobContainer}>
+        <DecoratorBlob1 id={TestId.Footer.FirstDecoratorBlob} />
+        <DecoratorBlob2 id={TestId.Footer.SecondDecoratorBlob} />
       </DecoratorBlobContainer>
     </Container>
   );

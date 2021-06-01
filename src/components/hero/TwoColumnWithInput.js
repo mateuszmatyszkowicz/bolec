@@ -39,16 +39,16 @@ export default ({ roundedHeaderButton }) => {
   return (
     <>
       {/* <Header roundedHeaderButton={roundedHeaderButton} /> */}
-      <Container>
-        <TwoColumn>
-          <LeftColumn>
+      <Container id={TestId.Hero.Hero}>
+        <TwoColumn id={TestId.Hero.TwoColumns}>
+          <LeftColumn id={TestId.Hero.LeftColumn}>
             <Heading id={TestId.Hero.Header}>
               Startujemy już <span tw="text-primary-500">wkrótce</span>!
             </Heading>
             <Paragraph id={TestId.Hero.Paragraph}>
               Gotowy do <span tw="text-primary-500">współpracy</span>? Zostaw nam swój adres e-mail, a poinformujemy <span tw="text-primary-500">Cię</span> gdy tylko będziemy gotowi!
             </Paragraph>
-            <Actions>
+            <Actions id={TestId.Hero.Actions}>
               <form name="contact" method="POST" data-netlify="true">
 
               <input id={TestId.Hero.EmailInput} type="text" name="email" placeholder="Podaj Adres E-mail" />
@@ -60,13 +60,13 @@ export default ({ roundedHeaderButton }) => {
               <img src={CustomersLogoStripImage} alt="Our Customers" />
             </CustomersLogoStrip>*/}
           </LeftColumn>
-          <RightColumn>
+          <RightColumn id={TestId.Hero.RightColumn}>
             <IllustrationContainer id={TestId.Hero.IllustrationContainer}>
               <img id={TestId.Hero.IllustrationImage} tw="min-w-0 w-full max-w-lg xl:max-w-3xl" src={ParkingCarWoman} alt="Car vector created by macrovector - www.freepik.com" />
             </IllustrationContainer>
           </RightColumn>
         </TwoColumn>
-        <DecoratorBlob1 />
+        <DecoratorBlob1 id={TestId.Hero.FirstDecoratorBlob} />
       </Container>
     </>
   );

@@ -100,8 +100,8 @@ export default ({ cards = null, heading = "Innowacyjny produkt", subheading = "F
   if (!cards) cards = defaultCards;
 
   return (
-    <Container>
-      <ThreeColumnContainer>
+    <Container id={TestId.Features.Features}>
+      <ThreeColumnContainer id={TestId.Features.FeaturesContainer}>
         {subheading && <Subheading id={TestId.Features.Subheader}>{subheading}</Subheading>}
         <Heading id={TestId.Features.Header}>{heading}</Heading>
         {description && <Description id={TestId.Features.Description}>{description}</Description>}
