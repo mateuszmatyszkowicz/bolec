@@ -145,14 +145,14 @@ export default () => {
           </LogoContainer>
           <CopywrightNotice id={TestId.Footer.CopyrightText}>&copy; 2021 Zaparkowani. All Rights Reserved.</CopywrightNotice>
           <SocialLinksContainer id={TestId.Footer.SocialsContainer}>
-            <SocialLink id={TestId.Footer.SocialsFacebookLink} href="https://facebook.com">
-              <FacebookIcon id={TestId.Footer.SocialsFacebookIcon} />
+            <SocialLink id={TestId.Footer.SocialsFacebookLink} href="https://facebook.com" aria-label={"Link to Facebook account"}>
+              <FacebookIcon id={TestId.Footer.SocialsFacebookIcon} alt={"Facebook Icon"} />
             </SocialLink>
-            <SocialLink id={TestId.Footer.SocialsTwitterLink} href="https://twitter.com">
-              <TwitterIcon id={TestId.Footer.SocialsTwitterIcon} />
+            <SocialLink id={TestId.Footer.SocialsTwitterLink} href="https://twitter.com" aria-label={"Link to Twitter account"}>
+              <TwitterIcon id={TestId.Footer.SocialsTwitterIcon} alt={"Twitter Icon"} />
             </SocialLink>
-            <SocialLink id={TestId.Footer.SocialsYouTubeLink} href="https://youtube.com">
-              <YoutubeIcon id={TestId.Footer.SocialsYouTubeIcon} />
+            <SocialLink id={TestId.Footer.SocialsYouTubeLink} href="https://youtube.com" aria-label={"Link to YouTube account"}>
+              <YoutubeIcon id={TestId.Footer.SocialsYouTubeIcon} alt={"YouTube Icon"}/>
             </SocialLink>
           </SocialLinksContainer>
         </ThreeColRow>

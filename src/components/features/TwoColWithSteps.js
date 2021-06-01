@@ -37,7 +37,7 @@ const Steps = tw.ul`mt-12`;
 const Step = tw.li`mt-8 flex flex-col md:flex-row items-center md:items-start`;
 const StepNumber = tw.div`font-semibold text-4xl leading-none text-gray-400`;
 const StepText = tw.div`mt-3 md:mt-0 md:ml-6`;
-const StepHeading = tw.h6`leading-none text-xl font-semibold`;
+const StepHeading = tw.h1`leading-none text-xl font-semibold`;
 const StepDescription = tw.p`mt-3 max-w-xs leading-loose text-sm text-gray-600 font-medium`;
 
 export default ({
@@ -79,7 +79,7 @@ export default ({
     <Container>
       <TwoColumn>
         <ImageColumn id={TestId.AdditionalFeatures.ImageColumn}>
-          <Image id={TestId.AdditionalFeatures.Image} src={imageSrc} imageBorder={imageBorder} imageShadow={imageShadow} imageRounded={imageRounded} />
+          <Image id={TestId.AdditionalFeatures.Image} src={imageSrc} imageBorder={imageBorder} imageShadow={imageShadow} imageRounded={imageRounded} alt={"People icons"} />
           {imageDecoratorBlob && <DecoratorBlob css={decoratorBlobCss} />}
         </ImageColumn>
         <TextColumn id={TestId.AdditionalFeatures.TextColumn} textOnLeft={textOnLeft}>
