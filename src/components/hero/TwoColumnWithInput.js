@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
+import MailchimpSubscribe from "react-mailchimp-subscribe";
 import styled from "styled-components";
 import tw from "twin.macro";
-import {TestId} from "consts/consts.js"
+import { TestId } from "consts/consts.js";
 //eslint-disable-next-line
 // import { css } from "styled-components/macro";
 
 // import Header from "../headers/light.js";
 
 import { ReactComponent as SvgDecoratorBlob1 } from "../../images/svg-decorator-blob-1.svg";
-import ParkingCarWoman from "images/parking-car-woman.png"
+import ParkingCarWoman from "images/parking-car-woman.png";
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col lg:flex-row lg:items-center max-w-screen-xl mx-auto py-20 md:py-24`;
@@ -35,6 +36,88 @@ const DecoratorBlob1 = styled(SvgDecoratorBlob1)`
   ${tw`pointer-events-none opacity-5 absolute left-0 bottom-0 h-64 w-64 transform -translate-x-2/3 -z-10`}
 `;
 
+const campaingUrl =
+  "https://zaparkowani.us6.list-manage.com/subscribe/post?u=7fb419f7281b19ea1c8379e21&amp;id=d254eed284";
+
+const SubscribeForm = ({ status, message, subscribe }) => {
+  const [email, setEmail] = useState("");
+  const handleSubmit = () => {
+    subscribe({
+      EMAIL: email,
+    });
+  };
+
+  if (status === "success") {
+    return (
+      <div>
+        <div style={{ width: 60, height: 60, margin: "40px auto" }}>
+          <svg
+            version="1.1"
+            id="Capa_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 50 50"
+            style={{ enableBackground: "new 0 0 50 50" }}
+            xmlSpace="preserve"
+          >
+            <circle style={{ fill: "#6415FF", cx: "25", cy: "25", r: "25" }} />
+            <polyline
+              style={{
+                fill: "none",
+                stroke: "#FFFFFF",
+                strokeWidth: 2,
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeMiterlimit: 10,
+              }}
+              points="
+   38,15 22,33 12,25 "
+            />
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+          </svg>
+        </div>
+        Dziękujemy! Oczekuj naszej wiadomości.
+      </div>
+    );
+  }
+
+  return (
+    <div>
+      <div style={{ position: "relative " }}>
+        <input
+          id={TestId.Hero.EmailInput}
+          type="text"
+          name="email"
+          placeholder="Podaj Adres E-mail"
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <button id={TestId.Hero.EmailButton} onClick={handleSubmit}>
+          Zapisz się
+        </button>
+      </div>
+      {status === "error" ? (
+        <div style={{ marginTop: 10 }}>Wystąpił błąd, sprawdź adress email</div>
+      ) : null}
+    </div>
+  );
+};
+
 export default ({ roundedHeaderButton }) => {
   return (
     <>
@@ -46,23 +129,35 @@ export default ({ roundedHeaderButton }) => {
               Startujemy już <span tw="text-primary-500">wkrótce</span>!
             </Heading>
             <Paragraph id={TestId.Hero.Paragraph}>
-              Gotowy do <span tw="text-primary-500">współpracy</span>? Zostaw nam swój adres e-mail, a poinformujemy <span tw="text-primary-500">Cię</span> gdy tylko będziemy gotowi!
+              Gotowy do <span tw="text-primary-500">współpracy</span>? Zostaw
+              nam swój adres e-mail, a poinformujemy{" "}
+              <span tw="text-primary-500">Cię</span> gdy tylko będziemy gotowi!
             </Paragraph>
             <Actions id={TestId.Hero.Actions}>
-              <form name="contact" method="POST" data-netlify="true">
-
-              <input id={TestId.Hero.EmailInput} type="text" name="email" placeholder="Podaj Adres E-mail" />
-              <button id={TestId.Hero.EmailButton} type="submit">Zapisz się</button>
-              </form>
+              <MailchimpSubscribe
+                url={campaingUrl}
+                render={({ status, message, subscribe }) => (
+                  <SubscribeForm
+                    status={status}
+                    message={message}
+                    subscribe={subscribe}
+                  />
+                )}
+              />
             </Actions>
-{/*            <CustomersLogoStrip>
+            {/*            <CustomersLogoStrip>
               <p>Our TRUSTED Customers</p>
               <img src={CustomersLogoStripImage} alt="Our Customers" />
             </CustomersLogoStrip>*/}
           </LeftColumn>
           <RightColumn id={TestId.Hero.RightColumn}>
             <IllustrationContainer id={TestId.Hero.IllustrationContainer}>
-              <img id={TestId.Hero.IllustrationImage} tw="min-w-0 w-full max-w-lg xl:max-w-3xl" src={ParkingCarWoman} alt="Car vector created by macrovector - www.freepik.com" />
+              <img
+                id={TestId.Hero.IllustrationImage}
+                tw="min-w-0 w-full max-w-lg xl:max-w-3xl"
+                src={ParkingCarWoman}
+                alt="Car vector created by macrovector - www.freepik.com"
+              />
             </IllustrationContainer>
           </RightColumn>
         </TwoColumn>
